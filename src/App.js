@@ -2,8 +2,8 @@ import Header from "./components/HeaderApp";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <div className="container">
+      <Header title="Cool task tracker"/>
     </div>
   );
 }

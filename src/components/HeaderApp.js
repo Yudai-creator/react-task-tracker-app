@@ -1,9 +1,11 @@
+import Button from "./ButtonApp";
 
 
-const Header = () => {
+const Header = ({title}) => {
     return ( 
-        <header>
-            <h1>Cool Task Tracker</h1>
+        <header className="header">
+            <h1>{title}</h1>
+            <Button color='red' text='Add task'/>
         </header>
      );
 }
