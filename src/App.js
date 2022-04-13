@@ -1,5 +1,6 @@
 import Header from "./components/HeaderApp";
 import Tasks from "./components/Tasks";
+import Button from "./components/ButtonApp";
 import { useState } from "react";
 
 function App() {
@@ -25,10 +26,23 @@ function App() {
     }
 ]
     )
+
+
+  // Delete Task
+
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id)) 
+  }
+
   return (
     <div className="container">
       <Header title="Cool task tracker"/>
-      <Tasks tasks={tasks}/>
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask}/> : 
+      (<div>
+        <h3>No taks left, create a new one</h3>
+        <Button color='orangered' text='New Task'/>
+      </div>)
+      }
     </div>
   );
 }

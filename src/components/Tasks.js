@@ -1,10 +1,10 @@
 import TaskComp from "./TaskComp";
 
-const Tasks = ({tasks}) => {
+const Tasks = ({tasks, onDelete}) => {
     return ( 
         <div>
             {tasks.map((task) => (
-            <TaskComp key={task.id} task={task}/>
+            <TaskComp key={task.id} task={task} onDelete={onDelete}/>
             ))}
         </div>
      );
