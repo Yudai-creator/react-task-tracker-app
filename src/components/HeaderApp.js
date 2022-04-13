@@ -2,10 +2,13 @@ import Button from "./ButtonApp";
 
 
 const Header = ({title}) => {
+    const clickEvent = (e) => {
+        console.log(e)
+    }
     return ( 
         <header className="header">
             <h1>{title}</h1>
-            <Button color='red' text='Add task'/>
+            <Button  text='Add task!' clickEvent={clickEvent}/>
         </header>
      );
 }
