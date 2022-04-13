@@ -1,11 +1,11 @@
-
+import TaskComp from "./TaskComp";
 
 const Tasks = ({tasks}) => {
-    
-
     return ( 
         <div>
-            {tasks.map((task) => (<h3 key={task.id}>{task.text}</h3>))}
+            {tasks.map((task) => (
+            <TaskComp key={task.id} task={task}/>
+            ))}
         </div>
      );
 }
