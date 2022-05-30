@@ -1,7 +1,9 @@
 import Header from "./components/HeaderApp";
 import Tasks from "./components/Tasks";
 import Button from "./components/ButtonApp";
+import AddTask from "./components/AddTask";
 import { useState } from "react";
+
 
 function App() {
   const [tasks, setTasks] = useState(
@@ -42,6 +44,7 @@ function App() {
   return (
     <div className="container">
       <Header title="Cool task tracker"/>
+      <AddTask/>
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={reminderOn}/> : 
       (<div>
         <h3>No taks left, create a new one</h3>

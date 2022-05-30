@@ -8,7 +8,7 @@ const Header = ({title}) => {
     return ( 
         <header className="header">
             <h1>{title}</h1>
-            <Button  text='Add task!' clickEvent={clickEvent}/>
+            <Button text='Add task!' clickEvent={clickEvent}/>
         </header>
      );
 }
