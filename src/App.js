@@ -30,6 +30,17 @@ function App() {
     )
 
 
+
+
+  // Add task  
+
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 100) +1
+
+    const newTask = {id, ...task}
+    setTasks([...tasks, newTask])
+  }
+
   // Delete Task
 
   const deleteTask = (id) => {
@@ -44,7 +55,7 @@ function App() {
   return (
     <div className="container">
       <Header title="Cool task tracker"/>
-      <AddTask/>
+      <AddTask onAdd={addTask}/>
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={reminderOn}/> : 
       (<div>
         <h3>No taks left, create a new one</h3>
